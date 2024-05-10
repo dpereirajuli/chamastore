@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chama Store</title>
+</head>
+<body>
+
+    <header>
+        <img src="./fotos/logo.png" alt="">
+        <h1>Catálogo</h1>
+    </header>
+
+    <div class="catalogo">
+        <div class="produto" id="produto1">
+            <img src="fotos/image1.jpeg" alt="Dois pares de brinco">
+            <h2>Dois pares de brinco</h2>
+            <p>Brincos de prata 925</p>
+            <p>R$ 50,00</p>
+            <button onclick="adicionarAoCarrinho('Dois pares de brinco',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto2">
+            <img src="fotos/image2.jpeg" alt="Anel">
+            <h2>Anel</h2>
+            <p>Prata 925</p>
+            <p>R$ 60,00</p>
+            <button onclick="adicionarAoCarrinho('Anel', 50)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto3">
+            <img src="fotos/image3.jpeg" alt="Escapulário Nossa senhora">
+            <h2>Escapulário Nossa senhora</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Escapulário Nossa senhora', 80)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto4">
+            <img src="fotos/image4.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Colar terço 45cm', 70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto5">
+            <img src="fotos/image5.jpeg" alt="Duplo Aneis">
+            <h2>Duplo aneis</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Duplo Aneis', 70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto6">
+            <img src="fotos/image6.jpeg" alt="Aneis de borboleta">
+            <h2>Aneis de borboleta</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Aneis de borboleta',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto7">
+            <img src="fotos/image7.jpeg" alt="Anel de corrente">
+            <h2>Anel de corrente</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Anel de corrente',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto8">
+            <img src="fotos/image8.jpeg" alt="Par de brincos com joia">
+            <h2>Par de brincos com joia</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Par de brincos com joia',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto9">
+            <img src="fotos/image9.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Colar terço 45cm',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto10">
+            <img src="fotos/image10.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Colar terço 45cm',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto11">
+            <img src="fotos/image11.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+            <button onclick="adicionarAoCarrinho('Colar terço 45cm',70)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" id="produto12">
+            <img src="fotos/image12.jpeg" alt="Colar terço 45cm">
+            <h2>Colar terço 45cm</h2>
+            <p>Colar de prata 925</p>
+            <p>R$ 70,00</p>
+        <button onclick="adicionarAoCarrinho('Colar terço 45cm', 70)">Adicionar ao carrinho</button>
+        </div>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://wa.me/5511988873231?text=Ajuda%20com%20catalogo" style="position:fixed;width:60px;height:60px;bottom:70px;right:10px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+          z-index:1000;" target="_blank">
+        <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+        </a>
+        
+        <div id="carrinho-icon" onclick="abrirCarrinho()">
+            <img  src="https://img.icons8.com/ios-glyphs/30/shopping-basket-success.png" alt="shopping-basket-success"/>
+        </div>
+        <!-- Modal do carrinho -->
+        <div id="modal-carrinho" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharCarrinho()">&times;</span>
+                <h2>Carrinho de Compras</h2>
+                <ul id="lista-produtos"></ul>
+                <button onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+        </div>
+
+<footer>
+    <p>Chama Store - 2024- Desenvolvido por Dtech t.i</p>
+</footer>
+
+<script>
+    var carrinho = [];
+
+    function adicionarAoCarrinho(produto, preco) {
+        carrinho.push({ produto: produto, preco: preco });
+        atualizarNumeroItensCarrinho();
+        alert(produto + " adicionado ao carrinho!");
+    }
+
+    function atualizarNumeroItensCarrinho() {
+        var numeroItens = carrinho.length;
+        document.getElementById("carrinho-icon").textContent = numeroItens;
+    }
+
+    function finalizarPedido() {
+            if (carrinho.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+    
+            var mensagem = "Produtos no carrinho:\n";
+            carrinho.forEach(function(item) {
+                mensagem += " " + item.produto + " R$ " + item.preco + "\n";
+            }); 
+    
+            var linkWhatsapp = "https://api.whatsapp.com/send?phone=+5511988873231&text=" + encodeURIComponent(mensagem);
+            window.open(linkWhatsapp, '_blank');
+
+        }
+
+    function abrirCarrinho() {
+        // Exibe o modal do carrinho
+        document.getElementById("modal-carrinho").style.display = "block";
+
+        // Atualiza a lista de produtos no modal
+        var listaProdutos = document.getElementById("lista-produtos");
+        listaProdutos.innerHTML = "";
+        carrinho.forEach(function(item, index) {
+            var li = document.createElement("li");
+            li.textContent = item.produto + " - R$ " + item.preco;
+            var btnExcluir = document.createElement("button");
+            btnExcluir.textContent = "Excluir";
+            btnExcluir.onclick = function() {
+                carrinho.splice(index, 1);
+                atualizarNumeroItensCarrinho();
+                abrirCarrinho(); // Atualiza o modal após excluir um produto
+            };
+            li.appendChild(btnExcluir);
+            listaProdutos.appendChild(li);
+        });
+    }
+
+    function fecharCarrinho() {
+        document.getElementById("modal-carrinho").style.display = "none";
+    }
+</script>
+ 
+
+</body>
+</html>
